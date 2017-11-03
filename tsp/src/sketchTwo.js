@@ -1,12 +1,14 @@
-export default function sketck(p) {
+export default function sketch(p) {
   console.log(p);
   var cities = [];
-  var totalCities = 5;
+  var totalCities = 10;
+
   var order = [];
   var totalPermutations;
   var count = 0;
   var recordDistance;
   var bestEver;
+
 
   p.setup = function() {
     p.createCanvas(400, 600);
@@ -29,10 +31,11 @@ export default function sketck(p) {
     if (props.numberCities) {
       totalCities = parseInt(props.numberCities, 10)
     }
-    console.log(typeof totalCities);
+    return totalCities
   }
 
   p.draw = function() {
+
     p.background(0);
     // frameRate(5);
     p.fill(255);

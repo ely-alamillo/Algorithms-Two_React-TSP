@@ -1,4 +1,4 @@
-export default function skect(p) {
+export default function sketch(p) {
   p.setup = function() {
     p.createCanvas(400, 600);
 

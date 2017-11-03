@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
 
-import P5Wrapper from 'react-p5-wrapper';
+import P5Wrap from './react-p5-wrapper-custom';
 import sketch from './sketchTwo'
 import blankSketch from './blankSketch'
 
@@ -14,7 +14,7 @@ class BruteForce extends Component {
       renderBlank: true,
       sketchState: sketch,
       startSketch: null,
-      numberCities: '',
+      numberCities: 5,
     }
     this.handleStart = this.handleStart.bind(this)
     this.handleCities = this.handleCities.bind(this)
@@ -46,8 +46,8 @@ class BruteForce extends Component {
     return (
       <div>
         {this.state.renderBlank ?
-          <P5Wrapper sketch={this.state.blankSketch}/> :
-          <P5Wrapper sketch={this.state.sketchState} numberCities={this.state.numberCities}/>}
+          <P5Wrap sketch={this.state.blankSketch}/> :
+          <P5Wrap sketch={this.state.sketchState} numberCities={this.state.numberCities}/>}
 
         <form onSubmit={this.handleCitiesSumbit}>
           <FormGroup>
